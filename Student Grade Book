@@ -1,0 +1,25 @@
+students = {
+    "Student1": {"Name": "Aarav", "Score": 95},
+    "Student2": {"Name": "Kanik", "Score": 100},
+    "Student3": {"Name": "Vihaan", "Score": 75},
+    "Student4": {"Name": "Ivan", "Score": 67},
+    "Student5": {"Name": "Viraaj", "Score": 39}
+}
+
+total = sum(students.values())
+average = total / len(students)
+print("Average =", average)
+
+topscorer = max(students, key=students.get())
+lowerscorer = min(students, key=students.get())
+
+print("Top Scorer:", topscorer)
+print("Lowest Scorer:", lowerscorer)
+
+n = input("Enter a student name: ")
+
+if n in students:
+    print("Student:", n)
+    print("Score:", students(n))
+else:
+    print("Sorry, student not found!")
